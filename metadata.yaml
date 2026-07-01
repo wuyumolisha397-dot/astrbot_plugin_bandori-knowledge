@@ -1,8 +1,10 @@
 name: astrbot_plugin_bandori
-author: bandori-knowledge
+author: wuyumolisha397-dot
 display_name: BanG Dream! 知识库
-desc: 查询 BanG Dream! 企划的角色、歌曲、乐队信息，支持本地知识库检索与 RAG 回退。
-version: 1.0.0
-short_desc: BanG Dream! 知识库插件
+desc: 查询 BanG Dream! 企划的角色、歌曲、乐队、声优信息。本地知识库毫秒级检索 + 图文卡片回复。
+version: 1.1.0
+short_desc: Bandori 全系列知识库插件
+repo: https://github.com/wuyumolisha397-dot/astrbot_plugin_bandori-knowledge
 astrbot_version: ">=4.13.0"
-homepage: https://github.com/wuyumolisha397-dot/bangdream-knowledgetest
+support_platforms:
+  - aiocqhttp
