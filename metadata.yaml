@@ -2,9 +2,23 @@ name: astrbot_plugin_bandori
 author: wuyumolisha397-dot
 display_name: BanG Dream! 知识库
 desc: 查询 BanG Dream! 企划的角色、歌曲、乐队、声优信息。本地知识库毫秒级检索 + 图文卡片回复。
+help: |
+  常用指令：
+  1. /角色 <名称> 或 /随机角色
+  2. /歌曲 <名称> 或 /随机歌曲
+  3. /乐队 <名称> 或 /随机乐队
+  4. /声优 <名称> 或 /随机声优
+  5. /萌百搜索 <关键词>
+  6. /bandori — 查看帮助
 version: 1.1.0
 short_desc: Bandori 全系列知识库插件
 repo: https://github.com/wuyumolisha397-dot/astrbot_plugin_bandori-knowledge
 astrbot_version: ">=4.13.0"
 support_platforms:
   - aiocqhttp
+keywords:
+  - BanG Dream!
+  - 知识库
+  - 萌娘百科
+  - 角色查询
+  - 乐队
