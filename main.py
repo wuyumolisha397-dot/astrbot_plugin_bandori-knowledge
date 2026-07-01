@@ -180,9 +180,17 @@ class BandoriPlugin(Star):
 
         yield event.plain_result(text)
 
+    # ── 指令组 ────────────────────────────────────────────────────────────────
+
+    @filter.command_group("bandori")
+    def bandori(self):
+        """BanG Dream! 知识库 — 角色/歌曲/乐队/声优查询"""
+        pass
+
     # ── 命令：/角色 ───────────────────────────────────────────────────────────
 
     @filter.command("角色")
+    @bandori.command("角色")
     async def cmd_character(self, event: AstrMessageEvent) -> MessageEventResult:
         """查询角色信息
 
