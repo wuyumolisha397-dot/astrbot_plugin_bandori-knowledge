@@ -1,0 +1,8 @@
+{
+  "kb_path": {
+    "type": "string",
+    "title": "知识库路径",
+    "description": "output/ 目录的绝对路径",
+    "default": ""
+  }
+}
