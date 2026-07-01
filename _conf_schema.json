@@ -1,8 +1,8 @@
 {
   "kb_path": {
     "type": "string",
-    "title": "知识库路径",
-    "description": "output/ 目录的绝对路径",
+    "description": "知识库 output/ 目录的绝对路径",
+    "hint": "例如 /home/admin/bangdream-knowledgetest/output，插件启动时自动扫描该目录下的所有 .md 文件。Docker 部署请填写容器内路径 /AstrBot/knowledge。",
     "default": ""
   }
 }
