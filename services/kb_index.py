@@ -25,6 +25,13 @@ import yaml
 from pathlib import Path
 from typing import Optional
 
+# 可选 pinyin 支持
+try:
+    from pypinyin import lazy_pinyin
+    _PINYIN_OK = True
+except ImportError:
+    _PINYIN_OK = False
+
 
 # ── 分类 → 子目录映射 ─────────────────────────────────────────────────────
 
@@ -265,6 +272,15 @@ class KnowledgeIndex:
                 overlap = sum(1 for ch in query_lower if ch in title_lower)
                 if overlap >= len(query_lower) * 0.6:
                     score = 10.0 + overlap * 3.0
+
+        # pinyin 匹配加分
+        if _PINYIN_OK and query_lower.isalpha():
+            try:
+                pinyin_title = "".join(lazy_pinyin(title_lower))
+                if query_lower in pinyin_title:
+                    score += 50
+            except Exception:
+                pass
 
         # 惩罚空页 — 正文少于 30 字扣分
         if len(entry.preview) < 30:
