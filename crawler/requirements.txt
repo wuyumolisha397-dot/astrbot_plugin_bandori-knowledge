@@ -1,0 +1,17 @@
+# AstrBot BanG Dream! 知识库爬虫 依赖
+# Python 3.11+
+
+# HTTP 请求
+requests>=2.31.0
+
+# requests 内置的重试依赖（显式声明以保证版本兼容）
+urllib3>=2.0.0
+
+# 证书验证
+certifi>=2023.0.0
+
+# 字符编码检测（requests 依赖）
+charset-normalizer>=3.0.0
+
+# 国际化支持（requests 依赖）
+idna>=3.0

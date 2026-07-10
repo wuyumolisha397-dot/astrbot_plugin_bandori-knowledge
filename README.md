@@ -61,17 +61,20 @@ astrbot_plugin_bandori/
 
 ## 知识库准备
 
-本插件依赖 [bandori-knowledge](https://github.com/bandori-knowledge) 爬虫构建的知识库。
+本插件内置 `crawler/` 爬虫，用于构建本地 Markdown 知识库。
 
 ```bash
-# 克隆并爬取
-git clone https://github.com/bandori-knowledge/bandori-knowledge.git
-cd bandori-knowledge
+# 进入仓库内置爬虫目录
+cd crawler
 pip install -r requirements.txt
 python crawler.py
 ```
 
 爬取完成后，`output/` 目录即知识库根目录。
+
+如果日志出现 `action-notallowed - Unauthorized API call`，请先登录萌娘百科，
+再按 `crawler/README.md` 的说明设置 `MOEGIRL_COOKIE`。Cookie 属于敏感凭据，
+不要提交到 GitHub。
 
 ## 配置
 
